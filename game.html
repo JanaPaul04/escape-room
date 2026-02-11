@@ -9,17 +9,35 @@
 
 <script>
   if (localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 </script>
 
-<h1>Der Raum</h1>
-<p>Code eingeben</p>
+<h1>Escape Room</h1>
 
-<input id="answer">
-<button onclick="check()">OK</button>
+<!-- RAUM 1 -->
+<div id="room1">
+  <h2>Raum 1</h2>
+  <p>Was ist 2 + 2?</p>
+  <input id="answer1">
+  <button onclick="checkRoom1()">OK</button>
+</div>
 
-<p id="result"></p>
+<!-- RAUM 2 -->
+<div id="room2" style="display:none;">
+  <h2>Raum 2</h2>
+  <p>Was ist 5 × 3?</p>
+  <input id="answer2">
+  <button onclick="checkRoom2()">OK</button>
+</div>
+
+<!-- RAUM 3 -->
+<div id="room3" style="display:none;">
+  <h2>Raum 3</h2>
+  <p>Letztes Rätsel: 12 - 4?</p>
+  <input id="answer3">
+  <button onclick="checkRoom3()">OK</button>
+</div>
 
 <script src="game.js"></script>
 </body>
