@@ -12,7 +12,9 @@ function showRoom(number) {
 
 // Raum 1 prüfen
 function checkRoom1() {
-  if (document.getElementById("answer1").value === "4") {
+  const input = document.getElementById("answer1").value.toLowerCase().trim();
+
+  if (input === "schluessel" || input === "schlüssel") {
     localStorage.setItem("progress", 2);
     showRoom(2);
   } else {
@@ -40,3 +42,4 @@ function checkRoom3() {
     alert("Falsch!");
   }
 }
+
